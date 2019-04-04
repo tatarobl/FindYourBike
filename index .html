@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find your Bike</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <style>
+        
+
+        .ingresar {
+            float: left;
+            height: 48px;
+            line-height: 48px;
+            margin: 0 6px 0 0;
+            width: 24px;
+        }
+
+        .nvar {
+            background-color: #1A5276 !important;
+            height: calc(100% - 65px);
+            position: absolute;
+        }
+
+        .img-nvar {
+            width: 62px;
+            display: block;
+            font-weight: 500;
+            height: 55px;
+            line-height: 48px;
+            float: left;
+            margin: 0 32px 0 20px;
+        }
+
+        .row .col.s3 {
+            width: 20% !important;
+        }
+
+        .nvar li {
+            border: 1px solid #1A5276;
+        }
+
+            .nvar li:hover {
+                cursor: pointer;
+                background-color: #1A5276;
+            }
+
+            .nvar li > a {
+                color: rgb(255, 255, 255) !important;
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 6px;
+            }
+
+                .nvar li > a > i.material-icons {
+                    float: left;
+                    height: 48px;
+                    line-height: 48px;
+                    margin: 0 6px 0 0;
+                    width: 24px;
+                    color: rgb(255, 255, 255) !important;
+                }
+
+        .embed-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 54%;
+        }
+
+            .embed-container iframe {
+                position: absolute;
+				display: block;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: calc(100% - 100px);
+            }
+
+        .conter-form {
+            float: right !important;
+            height: 20px !important;
+            width: 80% !important;
+            padding: 0 20px 0 20px !important;
+        }
+
+        @media (max-width: 867px) {
+            .embed-container {
+                padding-bottom: 60% !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .row .col .s3 {
+                width: 25% !important;
+            }
+
+            .embed-container {
+                padding-bottom: 120% !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .brand-logo {
+                left: 46% !important;
+            }
+
+            .conter-form {
+                float: left !important;
+                width: 100% !important;
+            }
+
+            .img-nvar {
+                margin: 0 0 0 0;
+            }
+
+            .logos-institucionales {
+                display: initial;
+            }
+        }
+    </style>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" type="image/png" href="imagenes/iconos/eanIcono.png" />
+
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+
+        })
+
+        function abrirOpcion(that) {
+            var url = that.attr('url');
+
+            $('#ifrMarco').attr('src', url);
+            $('.button-collapse').sideNav('hide');
+        }
+    </script>
+</head>
+
+<body>
+    <nav style="background-color: #5499C7;">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">
+                <img class="img-nvar" src="imagenes/blanco.jpg">Find your Bike
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right">
+                <li>
+                    <a url="procesos/login/login.html" onclick="abrirOpcion($(this))">
+                        <i class="material-icons ingresar">person</i>
+                        <span class="hide-on-med-and-down">
+                        Ingresar</span>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <ul class="nvar side-nav" id="mobile-demo">
+                    <li>
+                        <a url= "procesos/tienda/tienda.html" onclick="abrirOpcion($(this))">
+                            <i class="material-icons">directions_bike</i>Busca tu Bici
+                        </a>
+                    </li>
+                    <li>
+                        <a url="procesos/mapa/mapa.html"  onclick="abrirOpcion($(this))">
+                            <i class="material-icons">location_on</i>Mapa Cicloruta
+                        </a>
+                    </li>
+                    <!--
+                    <li>
+                        <a url="procesos/informacion/info.html" onclick="abrirOpcion($(this))">
+                            <i class="material-icons">announcement</i>Información Ciclista
+                        </a>
+                    </li>
+                    -->
+                    <li>
+                        <a url="procesos/registro/registro.html" onclick="abrirOpcion($(this))">
+                            <i class="material-icons">person_add</i>Registro
+                        </a>
+                    </li>
+                    <li>
+                        <a url="procesos/contacto/contacto.html" onclick="abrirOpcion($(this))">
+                            <i class="material-icons">contacts</i>Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+
+        <div class="nvar col s3 hide-on-med-and-down">
+            <ul id="slide-out">
+                <li>
+                    <a url="procesos/tienda/tienda.html"onclick="abrirOpcion($(this))">
+                        <i class="material-icons">directions_bike</i>Busca tu Bici
+                    </a>
+                </li>
+                <li>
+                    <a url="procesos/mapa/mapa.html" onclick="abrirOpcion($(this))">
+                        <i class="material-icons">location_on</i>Mapa Cicloruta
+                    </a>
+                </li>
+                <!--
+                <li>
+                    <a url="procesos/informacion/info.html" onclick="abrirOpcion($(this))">
+                        <i class="material-icons">announcement</i>Información Ciclistas
+                    </a>
+                </li>
+                -->
+                <li>
+                    <a url="procesos/registro/registro.html" onclick="abrirOpcion($(this))">
+                        <i class="material-icons">person_add</i>Registro
+                    </a>
+                </li>
+                <li>
+                        <a url="procesos/contacto/contacto.html" onclick="abrirOpcion($(this))">
+                            <i class="material-icons">contacts</i>Contacto
+                        </a>
+                    </li>
+            </ul>
+            
+            
+        </div>
+
+        <div class="col s9 conter-form">
+            <div>
+                <div class="embed-container">
+                    <iframe id="ifrMarco" frameborder="0" allowfullscree></iframe>
+                </div>
+            </div>
+            
+        </div>       
+    </div>
+    
+    
+    
+</body>
+
+</html>

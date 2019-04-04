@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head lang="es">
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-with, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<title>Busca aquí tu cicla</title>
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="form__top">
+				<h2>Busca <span> aquí tu Bici</span></h2>
+			</div>
+			<form class="form___reg" action="" onsubmit="return validar();">
+				<input class="input" id="marca" type="text" placeholder="Marca" required autofocus>
+				<input class="input" id="color" type="text" placeholder="Color" required >
+				<input class="input" id="rines" type="text" placeholder="Rines" required >
+				<input class="input" id="serie" type="text" placeholder="Serie No." required >
+				
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="BUSCAR" >
+				</div>				
+			</form>
+		</div>
+		
+		
+		<script>
+			function validar() {
+				var  marca, color, rines, serie;		
+				marca=document.getElementById("marca").value;
+				color=document.getElementById("color").value;
+				rines=document.getElementById("rines").value;
+				serie=document.getElementById("serie").value;
+				
+				
+				if( marca==="" || color==="" || rines==="" || serie===""){
+					alert("Completa este campo");
+					return false;
+				}
+				else if(marca.length>20){
+					alert ("Marca muy largo");
+					return false;
+				}
+				else if(rines.length>20){
+					alert ("Rines muy largo");
+					return false;
+				}
+				else if(color.length>20){
+					alert ("Color muy largo");
+					return false;
+				}
+				else if(serie.length>10){
+					alert("No. de serie muy larga");
+					return false;
+				}
+			}
+			
+		</script>
+		
+	</body>
+</html>
