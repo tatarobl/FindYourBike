@@ -23,8 +23,8 @@ git push origin master
 
 --PARA AGREGAR EL SIGUIENTE AVANCE--
 
-git add -A
-git status
-git commit -m"comentar el siguiente cambio"
+git add -A --
+git status --
+git commit -m"comentar el siguiente cambio"  --
 git push origin master 
 
