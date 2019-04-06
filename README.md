@@ -17,7 +17,7 @@ git status
 git commit -m"comentarios del cambio hecho"
 
 git remote add origin (link del repositorio)
-
+ 
 --se agrega al remoto--
 git push origin master
 
