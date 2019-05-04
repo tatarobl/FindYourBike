@@ -2,16 +2,16 @@
 <html>
 	<head lang="es">
 	<meta charset="utf-8"> 
-	<meta name="viewport" content="width=device-with, initial-scale=1.0">
+	<meta name="viewport">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" href="../../css/main.css">
-	<title>Busca aquí tu cicla</title>
+	<title>Registro de datos</title>
 	</head>
 	
 	<body>
 		<div class="container">
 			<div class="form__top">
-				<h2>Busca <span> aquí tu Bici</span></h2>
+				<h2>Registra <span> aquí tus datos</span></h2>
 			</div>
 			<form class="form___reg" action=""  onclick="validar();" onsubmit="validar();">
 				<input class="input" id="marca" type="text" placeholder="Nombre" required autofocus>
@@ -41,19 +41,19 @@
 					return false;
 				}
 				else if(nombre.length>2){
-					alert ("Marca muy largo");
+					alert ("Nombre muy largo");
 					return false;
 				}
 				else if(apellido.length>20){
-					alert ("Rines muy largo");
+					alert ("Apellido muy largo");
 					return false;
 				}
 				else if(telefono.length>20){
-					alert ("Color muy largo");
+					alert ("Telefono muy largo");
 					return false;
 				}
 				else if(email.length>10){
-					alert("No. de serie muy larga");
+					alert("Email muy largo");
 					return false;
 				}
 			}
